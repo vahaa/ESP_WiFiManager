@@ -1108,29 +1108,10 @@ void ESP_WiFiManager::handleRoot()
   page += FPSTR(WM_HTTP_STYLE);
   page += _customHeadElement;
   page += FPSTR(WM_HTTP_HEAD_END);
-  page += "<h2>";
-  page += _apName;
-
-  if (WiFi_SSID() != "")
-  {
-    if (WiFi.status() == WL_CONNECTED)
-    {
-      page += " on ";
-      page += WiFi_SSID();
-    }
-    else
-    {
-      page += " <s>on ";
-      page += WiFi_SSID();
-      page += "</s>";
-    }
-  }
-
-  page += "</h2>";
   page += FPSTR(WM_HTTP_PORTAL_OPTIONS);
-  page += F("<div class=\"msg\">");
-  reportStatus(page);
-  page += F("</div>");
+  //page += F("<div class=\"msg\">");
+  //reportStatus(page);
+  //page += F("</div>");
   page += FPSTR(WM_HTTP_END);
 
   server->send(200, "text/html", page);
@@ -1165,7 +1146,7 @@ void ESP_WiFiManager::handleWifi()
   page += FPSTR(WM_HTTP_STYLE);
   page += _customHeadElement;
   page += FPSTR(WM_HTTP_HEAD_END);
-  page += F("<h2>Configuration</h2>");
+  //page += F("<h2>WiFi Ayarları</h2>");
 
   //  KH, New, v1.0.6+
   numberOfNetworks = scanWifiNetworks(&networkIndices);
@@ -1178,7 +1159,7 @@ void ESP_WiFiManager::handleWifi()
   else
   {
     // From v1.0.10
-    page += FPSTR(WM_FLDSET_START);
+    page += FPSTR(WM_FLDSET_BORDER_START);
     //////
     
     //display networks in page

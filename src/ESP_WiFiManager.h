@@ -166,7 +166,7 @@ const char WM_HTTP_ITEM[] PROGMEM = "<div style='padding-bottom:5px'><a href=\"#
 const char JSON_ITEM[] PROGMEM = "{\"SSID\":\"{v}\", \"Encryption\":{i}, \"Quality\":\"{r}\"}";
 
 // KH, update from v1.1.0
-const char WM_HTTP_FORM_START[] PROGMEM = "<form method=\"get\" action=\"wifisave\"><fieldset><div><label>Bağlantı Adı:</label><input id=\"s\" name=\"s\" length=32 disabled placeholder=\"Lütfen modeminizi seçiniz.\"><div></div></div><div><label>Şifre:</label><input id=\"p\" name=\"p\" length=64 placeholder=\"Lütfen şifrenizi giriniz.\"></div></fieldset>";
+const char WM_HTTP_FORM_START[] PROGMEM = "<form method=\"get\" action=\"wifisave\"><fieldset><div><label>Bağlantı Adı:</label><input id=\"s\" name=\"s\" length=32  placeholder=\"Lütfen modeminizi seçiniz.\"><div></div></div><div><label>Şifre:</label><input id=\"p\" name=\"p\" length=64 placeholder=\"Lütfen şifrenizi giriniz.\"></div></fieldset>";
 //////
 
 // KH, add from v1.0.10
